@@ -38,7 +38,6 @@
 .login-page__background {
   position: absolute;
   inset: 0;
-
   pointer-events: none;
 
   background-image:
@@ -47,9 +46,14 @@
 
   background-size: 60px 60px;
 
-  opacity: 0.15;
+  opacity: var(--color-grid-opacity);
 
-  mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 0%,
+    black 65%,
+    transparent 100%
+  );
 }
 
 /* =========================================================
