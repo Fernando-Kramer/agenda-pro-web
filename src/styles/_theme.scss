@@ -1,0 +1,30 @@
+[data-theme="dark"] {
+  /* Primary */
+  --color-primary: #6f9caf;
+  --color-primary-hover: #86afc0;
+  --color-primary-active: #9bc0cf;
+
+  /* States */
+  --color-success: #72a486;
+  --color-warning: #c69a55;
+  --color-danger: #c87575;
+  --color-info: #78a0b5;
+
+  /* Background */
+  --color-background: #12171b;
+
+  /* Surface */
+  --color-surface: #1a2126;
+  --color-surface-secondary: #242c32;
+  --color-surface-tertiary: #2c353c;
+
+  /* Text */
+  --color-text-primary: #e7eaed;
+  --color-text-secondary: #aab3bb;
+  --color-text-muted: #7f8a94;
+  --color-text-on-primary: #12171b;
+
+  /* Border */
+  --color-border: #343d45;
+  --color-border-strong: #46515a;
+}

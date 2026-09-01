@@ -1,0 +1,16 @@
+html {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}

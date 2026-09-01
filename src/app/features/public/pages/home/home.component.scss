@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.home {
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  color: var(--color-text-primary);
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(99, 102, 241, 0.14),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(59, 130, 246, 0.1),
+      transparent 32%
+    ),
+    var(--color-background);
+
+  overflow: hidden;
+}
