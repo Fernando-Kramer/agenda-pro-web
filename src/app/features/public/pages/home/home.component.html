@@ -1,5 +1,431 @@
 <main class="home">
-  <app-navbar></app-navbar>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar__content">
+      <a class="brand" routerLink="/">
+        <span class="brand__mark">H</span>
+        <span class="brand__name">hou<span>pper</span></span>
+      </a>
 
-  <app-footer></app-footer>
+      <nav class="navbar__nav">
+        <a href="#recursos">Recursos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#clinicas">Para clínicas</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a (click)="login()" class="btn btn--ghost"> Entrar </a>
+
+        <a routerLink="/cadastro" class="btn btn--primary"> Começar agora </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__background"></div>
+
+    <div class="container hero__content">
+      <div class="hero__text">
+        <span class="eyebrow"> Gestão inteligente para clínicas </span>
+
+        <h1>
+          Sua clínica organizada.
+          <strong>Seu atendimento mais simples.</strong>
+        </h1>
+
+        <p>
+          O Houpper reúne agenda, pacientes, profissionais e contatos em um
+          único lugar para tornar a gestão da sua clínica mais simples,
+          eficiente e confiável.
+        </p>
+
+        <div class="hero__actions">
+          <a routerLink="/cadastro" class="btn btn--primary btn--large">
+            Começar agora
+            <span>→</span>
+          </a>
+
+          <a href="#recursos" class="btn btn--secondary btn--large">
+            Conhecer o Houpper
+          </a>
+        </div>
+
+        <div class="hero__trust">
+          <span>✓</span>
+          Simples de usar
+          <span>✓</span>
+          Feito para clínicas
+          <span>✓</span>
+          Preparado para crescer
+        </div>
+      </div>
+
+      <!-- DASHBOARD MOCKUP -->
+      <div class="hero__visual">
+        <div class="dashboard">
+          <div class="dashboard__header">
+            <div>
+              <span>Olá, Fernanda</span>
+              <strong>Visão geral</strong>
+            </div>
+
+            <div class="dashboard__avatar">F</div>
+          </div>
+
+          <div class="dashboard__stats">
+            <div class="stat">
+              <span>Consultas hoje</span>
+              <strong>18</strong>
+              <small>+12% esta semana</small>
+            </div>
+
+            <div class="stat">
+              <span>Pacientes</span>
+              <strong>842</strong>
+              <small>+24 este mês</small>
+            </div>
+          </div>
+
+          <div class="dashboard__calendar">
+            <div class="calendar__title">
+              <strong>Agenda</strong>
+              <span>Hoje</span>
+            </div>
+
+            <div class="appointment">
+              <span class="appointment__time">08:30</span>
+
+              <div>
+                <strong>Mariana Silva</strong>
+                <span>Consulta odontológica</span>
+              </div>
+
+              <span class="appointment__status"> Confirmada </span>
+            </div>
+
+            <div class="appointment">
+              <span class="appointment__time">10:00</span>
+
+              <div>
+                <strong>Lucas Almeida</strong>
+                <span>Avaliação fisioterapêutica</span>
+              </div>
+
+              <span class="appointment__status"> Confirmada </span>
+            </div>
+
+            <div class="appointment">
+              <span class="appointment__time">14:30</span>
+
+              <div>
+                <strong>Camila Santos</strong>
+                <span>Sessão de psicologia</span>
+              </div>
+
+              <span class="appointment__status"> Pendente </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="problem">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Menos complexidade</span>
+
+        <h2>
+          Administrar uma clínica
+          <strong>não precisa ser complicado.</strong>
+        </h2>
+
+        <p>
+          Planilhas, agendas diferentes, mensagens espalhadas e informações
+          difíceis de encontrar consomem tempo que poderia estar sendo usado
+          para cuidar dos seus pacientes.
+        </p>
+      </div>
+
+      <div class="problem__grid">
+        <article class="problem-card">
+          <span class="problem-card__icon">01</span>
+          <h3>Agendas desorganizadas</h3>
+          <p>
+            Tenha uma visão clara dos horários, profissionais e atendimentos da
+            sua clínica.
+          </p>
+        </article>
+
+        <article class="problem-card">
+          <span class="problem-card__icon">02</span>
+          <h3>Informações espalhadas</h3>
+          <p>
+            Centralize pacientes, contatos e informações importantes em um único
+            sistema.
+          </p>
+        </article>
+
+        <article class="problem-card">
+          <span class="problem-card__icon">03</span>
+          <h3>Processos manuais</h3>
+          <p>
+            Simplifique tarefas repetitivas e tenha mais controle sobre a rotina
+            da clínica.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÃO -->
+  <section class="solution" id="como-funciona">
+    <div class="container solution__content">
+      <div class="solution__visual">
+        <div class="solution-card">
+          <span class="solution-card__icon">✓</span>
+
+          <div>
+            <strong>Consulta confirmada</strong>
+            <span>Hoje às 14:30</span>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <span class="solution-card__icon">+</span>
+
+          <div>
+            <strong>Novo paciente</strong>
+            <span>Cadastro realizado</span>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <span class="solution-card__icon">⌁</span>
+
+          <div>
+            <strong>Agenda atualizada</strong>
+            <span>Todos os profissionais</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="solution__text">
+        <span class="eyebrow"> Tudo conectado </span>
+
+        <h2>
+          Uma plataforma para
+          <strong>toda a sua clínica.</strong>
+        </h2>
+
+        <p>
+          O Houpper foi pensado para centralizar a operação da clínica em uma
+          experiência simples e intuitiva.
+        </p>
+
+        <ul>
+          <li>
+            <span>✓</span>
+            Agenda e horários
+          </li>
+
+          <li>
+            <span>✓</span>
+            Pacientes e contatos
+          </li>
+
+          <li>
+            <span>✓</span>
+            Profissionais
+          </li>
+
+          <li>
+            <span>✓</span>
+            Organização dos atendimentos
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section class="features" id="recursos">
+    <div class="container">
+      <div class="section-heading section-heading--center">
+        <span class="eyebrow"> Recursos </span>
+
+        <h2>
+          Tudo que sua clínica precisa.
+          <strong>Sem complicação.</strong>
+        </h2>
+
+        <p>
+          Recursos pensados para facilitar o dia a dia de profissionais e
+          gestores.
+        </p>
+      </div>
+
+      <div class="features__grid">
+        <article class="feature">
+          <span class="feature__number">01</span>
+          <h3>Agenda</h3>
+          <p>Visualize e organize os atendimentos de forma simples e rápida.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__number">02</span>
+          <h3>Pacientes</h3>
+          <p>Mantenha os dados dos seus pacientes organizados e acessíveis.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__number">03</span>
+          <h3>Profissionais</h3>
+          <p>Gerencie profissionais, horários e disponibilidade.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__number">04</span>
+          <h3>Contatos</h3>
+          <p>
+            Centralize os contatos e facilite a comunicação com seus pacientes.
+          </p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__number">05</span>
+          <h3>Dashboard</h3>
+          <p>Tenha uma visão geral da operação da sua clínica.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__number">06</span>
+          <h3>Controle de acesso</h3>
+          <p>Defina permissões e mantenha cada informação protegida.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLÍNICAS -->
+  <section class="clinics" id="clinicas">
+    <div class="container">
+      <div class="section-heading section-heading--center">
+        <span class="eyebrow"> Feito para diferentes especialidades </span>
+
+        <h2>
+          Uma plataforma.
+          <strong>Várias possibilidades.</strong>
+        </h2>
+      </div>
+
+      <div class="clinics__grid">
+        <div class="clinic">
+          <span>✦</span>
+          <strong>Odontologia</strong>
+        </div>
+
+        <div class="clinic">
+          <span>✦</span>
+          <strong>Fisioterapia</strong>
+        </div>
+
+        <div class="clinic">
+          <span>✦</span>
+          <strong>Psicologia</strong>
+        </div>
+
+        <div class="clinic">
+          <span>✦</span>
+          <strong>Estética</strong>
+        </div>
+
+        <div class="clinic">
+          <span>✦</span>
+          <strong>Clínicas multidisciplinares</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIABILIDADE -->
+  <section class="reliability">
+    <div class="container reliability__content">
+      <div>
+        <span class="eyebrow"> Confiabilidade </span>
+
+        <h2>
+          Simples por fora.
+          <strong>Poderoso por dentro.</strong>
+        </h2>
+
+        <p>
+          O Houpper foi pensado para entregar uma experiência simples para quem
+          usa e uma estrutura robusta para quem depende dela todos os dias.
+        </p>
+      </div>
+
+      <div class="reliability__items">
+        <div>
+          <strong>01</strong>
+          <span>Arquitetura preparada para crescer</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>Dados organizados e centralizados</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>Controle de acesso</span>
+        </div>
+
+        <div>
+          <strong>04</strong>
+          <span>Experiência simples e intuitiva</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <span class="eyebrow"> Comece hoje </span>
+
+      <h2>
+        Menos tempo organizando.
+        <strong>Mais tempo cuidando.</strong>
+      </h2>
+
+      <p>
+        Conheça o Houpper e descubra uma forma mais simples de administrar sua
+        clínica.
+      </p>
+
+      <a routerLink="/cadastro" class="btn btn--primary btn--large">
+        Começar agora
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <div class="brand">
+        <span class="brand__mark">H</span>
+        <span class="brand__name">hou<span>pper</span></span>
+      </div>
+
+      <p>Gestão simples e poderosa para clínicas.</p>
+
+      <span class="footer__copyright">
+        © 2026 Houpper. Todos os direitos reservados.
+      </span>
+    </div>
+  </footer>
 </main>

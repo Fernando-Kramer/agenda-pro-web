@@ -1,0 +1,162 @@
+<div class="login-page">
+  <!-- BACKGROUND -->
+  <div class="login-page__background"></div>
+
+  <!-- HEADER -->
+  <header class="login-header">
+    <a routerLink="/" class="brand">
+      <span class="brand__mark"> H </span>
+
+      <span class="brand__name"> hou<span>pper</span> </span>
+    </a>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="login-content">
+    <section class="login-card">
+      <!-- INTRO -->
+      <div class="login-card__intro">
+        <span class="eyebrow"> Bem-vindo de volta </span>
+
+        <h1>
+          Acesse sua
+          <strong>clínica.</strong>
+        </h1>
+
+        <p>
+          Entre na sua conta Houpper para continuar gerenciando sua clínica.
+        </p>
+      </div>
+
+      <!-- FORM -->
+      <form class="login-form" (ngSubmit)="onSubmit()">
+        <!-- EMAIL -->
+        <div class="form-field">
+          <label for="email"> E-mail </label>
+
+          <div class="input-wrapper">
+            <span class="input-icon"> @ </span>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="seu@email.com"
+              [(ngModel)]="email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="form-field">
+          <div class="form-field__label">
+            <label for="password"> Senha </label>
+
+            <a routerLink="/login/forgot"> Esqueceu sua senha? </a>
+          </div>
+
+          <div class="input-wrapper">
+            <span class="input-icon"> ••• </span>
+
+            <input
+              id="password"
+              name="password"
+              [type]="showPassword ? 'text' : 'password'"
+              autocomplete="current-password"
+              placeholder="Digite sua senha"
+              [(ngModel)]="password"
+              required
+            />
+
+            <button
+              type="button"
+              class="password-toggle"
+              (click)="togglePassword()"
+              [attr.aria-label]="
+                showPassword ? 'Ocultar senha' : 'Mostrar senha'
+              "
+            >
+              {{ showPassword ? "Ocultar" : "Mostrar" }}
+            </button>
+          </div>
+        </div>
+
+        <!-- REMEMBER -->
+        <label class="remember">
+          <input type="checkbox" name="remember" [(ngModel)]="remember" />
+
+          <span class="remember__box"></span>
+
+          <span> Lembrar de mim </span>
+        </label>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="login-button" [disabled]="isLoading">
+          @if (isLoading) {
+            <span class="spinner"></span>
+
+            Entrando...
+          } @else {
+            Entrar
+
+            <span>→</span>
+          }
+        </button>
+
+        <!-- MOCK FEEDBACK -->
+        @if (showMockMessage) {
+          <div class="mock-message">
+            <span>✓</span>
+
+            Login mockado realizado com sucesso.
+          </div>
+        }
+      </form>
+
+      <!-- REGISTER -->
+      <div class="login-card__footer">
+        <span> Ainda não possui uma conta? </span>
+
+        <a routerLink="/cadastro"> Começar agora </a>
+      </div>
+    </section>
+
+    <!-- SIDE MESSAGE -->
+    <aside class="login-aside">
+      <div class="login-aside__content">
+        <span class="login-aside__mark"> H </span>
+
+        <h2>
+          Simples por fora.
+          <strong>Poderoso por dentro.</strong>
+        </h2>
+
+        <p>
+          O Houpper centraliza sua agenda, pacientes, profissionais e contatos
+          em um único lugar.
+        </p>
+      </div>
+
+      <div class="login-aside__footer">
+        <span>✓</span>
+        Gestão simples
+
+        <span>✓</span>
+        Alta confiabilidade
+      </div>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="login-footer">
+    <span> © 2026 Houpper </span>
+
+    <div>
+      <a href="#"> Privacidade </a>
+
+      <a href="#"> Termos </a>
+    </div>
+  </footer>
+</div>
