@@ -1,11 +1,13 @@
 import { Component } from "@angular/core";
-import { NavbarComponent } from "../../components/navbar/navbar.component";
-import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
-  imports: [NavbarComponent, FooterComponent],
+  imports: [],
   selector: "app-home",
   styleUrl: "./home.component.scss",
   templateUrl: "./home.component.html",
 })
-export class HomeComponent {}
+export class HomeComponent {
+  login() {
+    window.location.href = "http://localhost:4200/auth/login";
+  }
+}
